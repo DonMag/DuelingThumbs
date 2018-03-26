@@ -28,25 +28,43 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2QK-X0-Amq">
-                                <rect key="frame" x="157.5" y="303" width="60" height="60"/>
+                                <rect key="frame" x="257.5" y="303" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="pfP-Gg-fVc"/>
                                     <constraint firstAttribute="width" secondItem="2QK-X0-Amq" secondAttribute="height" multiplier="1:1" id="tff-X3-ZIl"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-w5-cLn">
+                                <rect key="frame" x="157.5" y="353.5" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XbS-w5-cLn" secondAttribute="height" multiplier="1:1" id="Dpb-Im-ROM"/>
+                                    <constraint firstAttribute="width" constant="60" id="GiA-CG-tx7"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XbS-w5-cLn" firstAttribute="centerX" secondItem="GVT-lo-cwf" secondAttribute="centerX" priority="750" id="17P-Tv-1vp"/>
                             <constraint firstItem="Anc-nj-GGB" firstAttribute="centerY" secondItem="GVT-lo-cwf" secondAttribute="centerY" id="1DA-qC-qsY"/>
-                            <constraint firstItem="2QK-X0-Amq" firstAttribute="centerX" secondItem="GVT-lo-cwf" secondAttribute="centerX" priority="750" id="ARa-2H-SXr"/>
+                            <constraint firstItem="Anc-nj-GGB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tfx-1i-fdp" secondAttribute="leading" constant="8" id="2Z8-Lw-5nW"/>
+                            <constraint firstItem="2QK-X0-Amq" firstAttribute="centerX" secondItem="GVT-lo-cwf" secondAttribute="centerX" priority="750" constant="100" id="ARa-2H-SXr"/>
+                            <constraint firstItem="tfx-1i-fdp" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2QK-X0-Amq" secondAttribute="trailing" constant="8" id="Wcg-Xq-l6s"/>
                             <constraint firstItem="Anc-nj-GGB" firstAttribute="centerX" secondItem="GVT-lo-cwf" secondAttribute="centerX" priority="750" constant="-100" id="aML-0l-kA7"/>
+                            <constraint firstItem="XbS-w5-cLn" firstAttribute="leading" secondItem="Anc-nj-GGB" secondAttribute="trailing" priority="250" constant="-30" id="bs0-FF-49h"/>
                             <constraint firstItem="2QK-X0-Amq" firstAttribute="centerY" secondItem="GVT-lo-cwf" secondAttribute="centerY" id="fZj-w9-mqs"/>
-                            <constraint firstItem="2QK-X0-Amq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Anc-nj-GGB" secondAttribute="trailing" constant="10" id="zQ5-RW-iZg"/>
+                            <constraint firstItem="2QK-X0-Amq" firstAttribute="leading" secondItem="XbS-w5-cLn" secondAttribute="trailing" priority="250" constant="-30" id="gmT-yB-Zqs"/>
+                            <constraint firstItem="XbS-w5-cLn" firstAttribute="centerY" secondItem="GVT-lo-cwf" secondAttribute="centerY" constant="50" id="qy4-yY-Bgj"/>
+                            <constraint firstItem="2QK-X0-Amq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Anc-nj-GGB" secondAttribute="trailing" id="zQ5-RW-iZg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tfx-1i-fdp"/>
                     </view>
                     <connections>
+                        <outlet property="centerCenterXConstraint" destination="17P-Tv-1vp" id="IPh-us-lJT"/>
+                        <outlet property="centerLeftConstraint" destination="bs0-FF-49h" id="HK1-2b-jIk"/>
+                        <outlet property="centerRightConstraint" destination="gmT-yB-Zqs" id="61a-dN-ned"/>
+                        <outlet property="centerThumbView" destination="XbS-w5-cLn" id="8rE-Fd-bc0"/>
                         <outlet property="leftCenterXConstraint" destination="aML-0l-kA7" id="yZR-UZ-DeO"/>
                         <outlet property="leftThumbView" destination="Anc-nj-GGB" id="qoX-V1-zsO"/>
                         <outlet property="rightCenterXConstraint" destination="ARa-2H-SXr" id="agj-Tf-wfL"/>
